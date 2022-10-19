@@ -1,0 +1,28 @@
+<div class="two-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <div class="item-header">
+            <h3>
+                TWO
+            </h3>
+        </div>
+        <div *ngFor="let item of values" class="item-input">
+            <input type="text" [id]="'textFormField'+item" [formControlName]="'textFormField'+item" placeholder="TEXT FORM FIELD" />
+            <div class="validation" *ngIf="(form.controls['textFormField'+item].touched || form.controls['textFormField'+item].dirty ) && form.controls['textFormField'+item].errors?.['required']">
+                Text Form Field {{item}} is required.
+            </div>
+        </div>
+        <div class="action">
+            <div class="item-col">
+                <button type="button" [disabled]="isFormEmpty" (click)="!isFormEmpty && form.reset();">
+                    RESET
+                </button>
+            </div>
+            <div class="item-col">
+                <button type="submit" [disabled]="!form.valid">
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

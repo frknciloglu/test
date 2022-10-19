@@ -1,0 +1,105 @@
+html,
+body {
+    height: 100vh !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-width: 350px !important;
+}
+
+
+
+.app-container {
+    background-color: pink !important;
+    background: transparent !important;
+    display: flex;
+    height: 100vh !important;
+    flex-direction: column;
+
+    
+
+    .header {
+        background-color: rgb(250, 250, 148);
+        text-transform: uppercase !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .app-body {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        background-color: pink !important;
+
+        .container {
+            flex: 0.8 !important;
+            display: flex;
+            flex-direction: row;
+            padding: 50px;
+        
+            .content {
+               flex: auto;
+               border: 1px solid black;
+                
+            }
+    
+            .menu {
+                min-width: 200px !important;
+                
+                
+
+                ul { 
+
+                    padding-left: 0!important;
+                    li {
+                        padding: 5px !important;
+                        list-style: none;
+                        display: flex;
+                    }
+                    
+                    li:hover {
+                        background-color: antiquewhite !important
+                    }
+
+                }
+            }
+    
+            
+        }
+
+        .side-bar {
+            flex: 0.2 !important;
+            background-color: rgb(92, 116, 151);
+            text-transform: uppercase !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+   
+
+    .footer {
+        background-color: rgb(145, 180, 145);
+        text-transform: uppercase !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 561.6px) {
+      .side-bar {
+        display: none !important;
+      }
+
+      .container {
+        .menu {
+            display: none !important;
+        }
+
+      }
+  }
+
